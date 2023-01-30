@@ -81,7 +81,7 @@ class MyLinkedList {
     }
     char removeFront() {
         if (size == 0 || head == nullptr) {
-            return *head;
+            return head->data;
         } else {
             MyNode *toReturn = head;
             head = head->nextNode;
