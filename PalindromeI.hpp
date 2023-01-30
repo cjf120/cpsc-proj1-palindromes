@@ -4,6 +4,7 @@
 #ifndef PALINDROMEI_HPP
 #define PALINDROMEI_HPP
 
+#include "MyStack.hpp"
 #include <string>
 
 class PalindromeI {

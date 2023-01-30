@@ -2,7 +2,6 @@
 #define PALINDROMEI_CPP
 
 #include "PalindromeI.hpp"
-#include "MyStack.hpp"
 #include <string>
 
 class PalindromeI {
@@ -14,6 +13,7 @@ public:
         for (char c : s) {
             stack->push(c);
         }
+        return 0;
     }
 };
 
