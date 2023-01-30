@@ -5,6 +5,7 @@
 #define PALINDROMEI_HPP
 
 #include "MyStack.hpp"
+#include "MyQueue.hpp"
 #include <string>
 
 class PalindromeI {
