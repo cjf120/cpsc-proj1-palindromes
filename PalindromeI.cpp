@@ -9,8 +9,15 @@ class PalindromeI {
 public:
     PalindromeI() {}
     int test_string(const std::string& s) {
-        MyStack *stack = new MyStack;
+        std::string goodString = "";
         for (char c : s) {
+            if (isalpha(c)) {
+                goodString += std::tolower(c);
+            }
+        }
+
+        MyStack *stack = new MyStack;
+        for (char c : goodString) {
             stack->push(c);
         }
         return 0;
