@@ -5,9 +5,10 @@ Custom Linked List Class for Data Structures Project 1 - Palindromes
 #include "MyLinkedList.hpp"
 
 class MyLinkedList {
-    public:
+    private:
     MyNode *head = nullptr;
     MyNode *secondLast = nullptr;
+    public:
     int size = 0;
     MyLinkedList() {    }
     ~MyLinkedList() {
@@ -42,7 +43,7 @@ class MyLinkedList {
         size += 1;
         return *oldHead;
     }
-    MyNode addToBack(MyNode *node) {
+    MyNode addToEnd(MyNode *node) {
         if (size > 1) {
             MyNode *last = secondLast->nextNode;
             last->nextNode = node;
@@ -58,7 +59,7 @@ class MyLinkedList {
             return addToFront(node);
         }
     }
-    MyNode addToBack(char c) {
+    MyNode addToEnd(char c) {
         if (size > 1) {
             MyNode *last = secondLast->nextNode;
             MyNode *node;
@@ -78,26 +79,32 @@ class MyLinkedList {
             return addToFront(c);
         }
     }
-    MyNode removeFront() {
+    char removeFront() {
         if (size == 0 || head == nullptr) {
             return *head;
         } else {
             MyNode *toReturn = head;
             head = head->nextNode;
             size -= 1;
-            return *toReturn;
+            return toReturn->data;
         }
     }
-    MyNode removeEnd() {
+    char removeEnd() {
         if (size == 0 || head == nullptr) {
-            return *head;
+            return head->data;
         } else {
             MyNode *toReturn = secondLast->nextNode;
             secondLast->nextNode = nullptr;
             size -= 1;
             *secondLast = findSecondLast();
-            return *toReturn;
+            return toReturn->data;
         }
+    }
+    char seeFront() {
+        return head->data;
+    }
+    char seeEnd() {
+        return secondLast->nextNode->data;
     }
     MyNode findSecondLast() {
         if (size == 0) {

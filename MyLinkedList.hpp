@@ -6,8 +6,6 @@ struct MyNode {
 
 class MyLinkedList {
     public:
-    MyNode *head;
-    MyNode *secondLast;
     int size;
     MyLinkedList();
     ~MyLinkedList();
@@ -15,9 +13,13 @@ class MyLinkedList {
     MyNode addToFront(char c);
     MyNode addToEnd(MyNode *node);
     MyNode addToEnd(char c);
-    MyNode removeFront();
-    MyNode removeEnd();
+    char removeFront();
+    char removeEnd();
+    char seeFront();
+    char seeEnd();
     
     private:
+    MyNode *head;
+    MyNode *secondLast;
     MyNode findSecondLast();
 };
