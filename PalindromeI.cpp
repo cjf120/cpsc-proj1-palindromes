@@ -35,6 +35,8 @@ public:
             }
             position++;
         }
+        delete stack;
+        delete queue;
         return isPalindrome;
     }
 };
