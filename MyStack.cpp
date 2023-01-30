@@ -17,7 +17,13 @@ class MyStack {
     char pop() {
         return theStack->removeEnd();
     }
-    char top();
-    bool isEmpty();
-    int getSize();
+    char top() {
+        return theStack->seeEnd();
+    }
+    bool isEmpty() {
+        return (theStack->size == 0);
+    }
+    int getSize() {
+        return theStack->size;
+    }
 };
