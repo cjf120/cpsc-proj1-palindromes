@@ -20,7 +20,22 @@ public:
         for (char c : goodString) {
             stack->push(c);
         }
-        return 0;
+        
+        MyQueue *queue = new MyQueue;
+        for (char c : goodString) {
+            queue->push(c);
+        }
+
+        int position = 0;
+        int isPalindrome = -1;
+        while(!stack->isEmpty()) {
+            if (stack->pop() != queue->pop()) {
+                isPalindrome = position;
+                break;
+            }
+            position++;
+        }
+        return isPalindrome;
     }
 };
 
