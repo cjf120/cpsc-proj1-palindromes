@@ -14,6 +14,8 @@ private:
         } else {
             if (s[0] == s[s.size() - 1]) {
                 return recursiveTest(s.substr(1, s.size()-2));
+            } else {
+                return 1;
             }
         }
     }
