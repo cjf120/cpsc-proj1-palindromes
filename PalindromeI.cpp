@@ -2,6 +2,7 @@
 #define PALINDROMEI_CPP
 
 #include "PalindromeI.hpp"
+#include "MyFunctions.cpp"
 #include <string>
 
 class PalindromeI {
@@ -9,12 +10,7 @@ class PalindromeI {
 public:
     PalindromeI() {}
     int test_string(const std::string& s) {
-        std::string goodString = "";
-        for (char c : s) {
-            if (isalpha(c)) {
-                goodString += std::tolower(c);
-            }
-        }
+        std::string goodString = simplifyString(s);
 
         MyStack *stack = new MyStack;
         for (char c : goodString) {
