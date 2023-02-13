@@ -8,6 +8,9 @@
 
 class PalindromeR {
 
+private:
+  int recursiveTest(std::string s);
+
 public:
   PalindromeR() {}
   int test_string(const std::string& s); 
