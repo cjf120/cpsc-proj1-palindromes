@@ -9,8 +9,8 @@ PalindromeI.o: PalindromeI.cpp
 PalindromeR.o: PalindromeR.cpp
 	    ${CC} ${FLAGS} -c PalindromeR.cpp
 
-palindrome.out: PalindromeI.o PalindromeR.o test_palindrome.cpp
-		${CC} ${FLAGS} test_palindrome.cpp *.o -o palindrome.out
+palindrome.out: PalindromeI.o PalindromeR.o test_palindrome.cpp 
+		${CC} ${FLAGS} test_palindrome.cpp *.o -o palindrome.out MyQueue.cpp MyStack.cpp MyLinkedList.cpp
 		
 clean:  
 	rm -f *.o

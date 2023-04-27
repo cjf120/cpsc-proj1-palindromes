@@ -6,7 +6,7 @@ struct MyNode {
 
 class MyLinkedList {
     public:
-    int size;
+    int size = 0;
     MyLinkedList();
     ~MyLinkedList();
     MyNode addToFront(MyNode *node);
@@ -19,7 +19,7 @@ class MyLinkedList {
     char seeEnd();
     
     private:
-    MyNode *head;
-    MyNode *secondLast;
+    MyNode *head = nullptr;
+    MyNode *secondLast = nullptr;
     MyNode findSecondLast();
 };

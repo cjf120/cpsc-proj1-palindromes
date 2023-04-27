@@ -10,9 +10,10 @@ class PalindromeR {
 
 private:
   int recursiveTest(std::string s);
+  std::string simplifyString(std::string s);
 
 public:
-  PalindromeR() {}
+  PalindromeR() = default;
   int test_string(const std::string& s); 
 };
 

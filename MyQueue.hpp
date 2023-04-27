@@ -9,8 +9,9 @@ class MyQueue {
     int getSize();
 
     private:
-    int index;
-    int size;
+    int index = 0;
+    int size = 1;
+    char MyArray[1] = { ' ' };
     bool isFull();
     void resizeArray();
     void copyToLarger();

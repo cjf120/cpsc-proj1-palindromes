@@ -11,8 +11,12 @@
 class PalindromeI {
 
 public:
-  PalindromeI() {}
-  int test_string(const std::string& s); 
+  PalindromeI() = default;
+  int test_string(const std::string& s);
+
+private:
+  std::string simplifyString(std::string s);
+
 };
 
 #endif
